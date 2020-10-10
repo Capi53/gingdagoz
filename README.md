@@ -24,4 +24,11 @@ Things you may want to cover:
 * ...
 # gingdagoz
 
-```https://github.com/Azama-K/gingdagoz/edit/develop/README.md```
+* heroku URL
+<https://dashboard.heroku.com/apps/gakusapo>
+
+* torello URL
+<https://trello.com/b/iwVFM3OB/%E3%82%AE%E3%83%B3%E3%82%B0%E3%83%80%E3%82%B4%E3%82%BA>
+
+* miro URL
+<https://miro.com/app/board/o9J_klkNEMI=/>
