@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  roll_id: 
+  name: MyText
+  mail: MyText
+  password: MyText
+
+two:
+  id: 
+  roll_id: 
+  name: MyText
+  mail: MyText
+  password: MyText

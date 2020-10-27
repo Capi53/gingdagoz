@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :articles
 
   root 'homes#index'
+
+  get '/users/index'
+  resources :users
 end
