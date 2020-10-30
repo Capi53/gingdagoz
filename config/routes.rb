@@ -8,6 +8,4 @@ Rails.application.routes.draw do
 
   get '/users/index'
   resources :users
-
-  get 'signup' => 'users#new'
 end
