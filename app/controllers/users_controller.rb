@@ -11,18 +11,25 @@ class UsersController < ApplicationController
        @user = User.new
      end
   
-   def create
-      @user = User.new(user_params)
-   
-      if @users.save
+     def create
+       @user = User.new(user_params)
+       if @user.save
+        flash[:success] = "Welcome to the Sample App!"
         redirect_to @user
-      else
+       else
         render 'new'
-      end
-#      @users = User.new(params[:user])
-#      respond_to do |format|
-# 
-   end
+       end
+     end
+      #  print(user_params)
+      # if @users.save
+      #   redirect_to @user
+      # else
+      #   render 'new'
+      # end
+  #      @users = User.new(params[:user])
+  #      respond_to do |format|
+  # 
+    #  end
   
      private
      def user_params
