@@ -1,5 +1,5 @@
 class User < ApplicationRecord  
-  has_secure_password
+#   has_secure_password
   def show
     @member = User.find(params[:id])
   end  
