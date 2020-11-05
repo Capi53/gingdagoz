@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email:params[:session][:email].downcase)
+    puts "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     puts user
     if user && user.authenticate(params[:session][:password])
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
