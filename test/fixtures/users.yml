@@ -1,1 +1,19 @@
 
+# one:
+#   id: 
+#   role_id: 
+#   name: MyText
+#   email: MyText
+#   password: MyText
+
+# two:
+#   id: 
+#   role_id: 
+#   name: MyText
+#   email: MyText
+#   password: MyText
+
+azamaK:
+  name: azamaK
+  email: e185731@com
+  password_digest: <%= User.digest('password') %>
