@@ -82,3 +82,31 @@ div {
 label {
   display: block;
 }
+
+body{
+  color:#000000;
+  background-color:#48d1cc;
+  font-size:20px;
+  
+  }
+article{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 3px #aaaaaa;
+  border-radius: 20px;
+  width: 250px;
+  background-color:#ffffff;}
+article h2 {
+  font-size:18px;
+  margin-left:auto;
+  margin-right:auto;}
+article li {list-style-image: url(listmark.png);}
+aside{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 3px #aaaaaa;
+  border-radius: 20px;
+  width: 250px;
+  background-color:#ffffff;}
+aside h2 {font-size:18px;}
+aside li {list-style-image: url(listmark2.png);}
