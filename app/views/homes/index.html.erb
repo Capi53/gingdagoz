@@ -1,7 +1,27 @@
+<header>StudySupport</header>
+<body>
 <h1>あなたのTAはアナグラさんです</h1>
-
 <h2><%= link_to 'アナグラさんにチャットする', controller: 'articles' %></h2>
 <h2>アナグラさんのカレンダーをみる</h2>
 <h2><%= link_to 'Usersにとぶ', controller: 'users' %></h2>
 <h2><%= link_to 'loginにとぶ', login_path %></h2>
-<h2>New user? <%= link_to "Sign up now!", signup_path %></h2>
+<h2>新規登録しますか?</h2>
+<h2><%= link_to "Sign up now!", signup_path %></h2></body>
+<article>
+<h2>TA</h2>
+<ul>
+<li><%= link_to 'アナグラさん', controller: 'articles' %></li>
+<li>たくやさん</li>
+<li>アイリスさん</li>
+<li>○○さん</li>
+</ul>
+</article>
+<aside>
+<h2>先生</h2>
+<ul>
+<li>國田先生</li>
+<li>當間先生</li>
+<li>○○先生</li>
+</ul>
+</aside>
+<footer>Copyright ©GingDagoz All Rights Reserved.</footer>
