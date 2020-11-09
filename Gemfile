@@ -65,3 +65,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #追加したよ〜^^
 gem 'rails-controller-testing'
+
+#カレンダー追加
+gem 'jquery-rails'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
