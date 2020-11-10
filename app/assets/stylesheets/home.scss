@@ -1,7 +1,16 @@
 header{
+    font-family: Papyrus;
+    
     font-size:25px;
     margin-left:auto;
     margin-right:auto;
+}
+.box3{
+    float: left;//横揃え
+}
+.box4{
+    float: left;//横揃え
+    float: right //右揃え
 }
 section{
     background-color:#ffffff;
@@ -48,7 +57,9 @@ body{
 .boxContainer{
     overflow: hidden;//横揃え
 }
-
+footer{
+    font-family: Papyrus;
+}
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
