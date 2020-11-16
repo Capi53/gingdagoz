@@ -6,17 +6,19 @@ Rails.application.routes.draw do
   
   resources :articles
 
-  root 'homes#index'
+  #root 'homes#index'
 
-  get '/users/index'
+  root 'sessions#new'
+
+  # get '/users/index'
 
   get 'signup' => 'users#new'
 
-  get 'login' => 'sessions#new'
+  # get 'login' => 'sessions#new'
 
   post 'login' => 'sessions#create'
 
-  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
 
   get 'calender' => 'events#index'
 

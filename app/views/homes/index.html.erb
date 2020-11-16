@@ -5,10 +5,14 @@
 </div>
 <div class = "box4">
 <section>
-  
+<% if logged_in? then %>
 <%= current_user.name %>
+<% else %>
+ログインしてください
+<% end %>
 
 </section>
+
 </div>
 </div>
 </header>
