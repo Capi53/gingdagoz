@@ -72,4 +72,4 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
 #モーダル追加
-gem 'bootstrap'
+# gem 'bootstrap'
