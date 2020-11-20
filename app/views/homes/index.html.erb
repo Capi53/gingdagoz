@@ -24,35 +24,7 @@
 
 <div class = "boxContainer">
 <div class = "box1">
-<h2>生徒(仮)</h2>
-<ul>
-<% @users.each do |u| %>
-  <% if u.role_id == 1 %>
-    <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
-  <% end %>
-<% end %>
-</ul>
-</div>
-<div class = "box2">
-<h2>先生</h2>
-<ul>
-<% @users.each do |u| %>
-  <% if u.role_id == 3 %>
-    <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
-  <% end %>
-<% end %>
-<li>國田先生</li>
-<li>當間先生</li>
-<li>○○先生</li>
-</ul>
-</div>
-</div>
-
-<% elsif current_user.role_id == 3 %>
-
-<div class = "boxContainer">
-<div class = "box1">
-<h2>生徒(仮)</h2>
+<h2>生徒</h2>
 <ul>
 <% @users.each do |u| %>
   <% if u.role_id == 1 %>
@@ -73,6 +45,61 @@
 <li>たくやさん</li>
 <li>アイリスさん</li>
 <li>○○さん</li>
+</ul>
+</div>
+<div class = "box1">
+<h2>先生</h2>
+<ul>
+<% @users.each do |u| %>
+  <% if u.role_id == 3 %>
+    <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
+  <% end %>
+<% end %>
+<li>國田先生</li>
+<li>當間先生</li>
+<li>○○先生</li>
+</ul>
+</div>
+</div>
+
+<% elsif current_user.role_id == 3 %>
+
+<div class = "boxContainer">
+<div class = "box1">
+<h2>生徒</h2>
+<ul>
+<% @users.each do |u| %>
+  <% if u.role_id == 1 %>
+    <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
+  <% end %>
+<% end %>
+</ul>
+</div>
+<div class = "box2">
+<h2>TA</h2>
+<ul>
+<% @users.each do |u| %>
+  <% if u.role_id == 2 %>
+    <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
+  <% end %>
+<% end %>
+<li><%= link_to 'アナグラさん', controller: 'articles' %></li>
+<li>たくやさん</li>
+<li>アイリスさん</li>
+<li>○○さん</li>
+</ul>
+</div>
+<div class = "box2">
+<h2>先生</h2>
+<ul>
+<% @users.each do |u| %>
+  <% if u.role_id == 3 %>
+    <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
+  <% end %>
+<% end %>
+<li>國田先生</li>
+<li>當間先生</li>
+<li>○○先生</li>
 </ul>
 </div>
 </div>
