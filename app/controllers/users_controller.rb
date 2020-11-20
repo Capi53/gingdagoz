@@ -4,11 +4,11 @@ class UsersController < ApplicationController
      end
   
      def show
-       @user = current_user
+       @user = User.find(params[:id])
 
        #自分が参加しているメッセージルーム情報を取得する
        @currentUserEntry = Entry.where(user_id: current_user.id)
-       #選択したユーザのメッセージルーム情報を取得する
+       #洗濯したユーザのメッセージルーム情報を取得する
        @userEntry = Entry.where(user_id: @user.id)
 
        #current_userと選択したユーザ間に共通のメッセージルームが存在すればフラグを立てる
