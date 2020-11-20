@@ -70,3 +70,6 @@ gem 'rails-controller-testing'
 gem 'jquery-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+
+#モーダル追加
+gem 'bootstrap'
