@@ -1,21 +1,3 @@
-<h1>先生の画面</h1>
-
-<h2><%= link_to 'ペアを追加する', new_user_path %></h2>
-
-<table>
-  <tr>
-    <th>名前</th>
-    <th></th>
-  </tr>
-
-  <% @users.each do |article| %>
-    <tr>
-      <td><%= article.name %></td>
-      <td><%= link_to 'Show', user_path(article) %></td>
-    </tr>
-  <% end %>
-</table>
-
 <h1>DMできます</h1>
 <% if logged_in? then %>
 <h2>私の名前は <%= current_user.name %></h2>
