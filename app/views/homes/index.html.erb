@@ -7,6 +7,7 @@
 <section>
 <% if logged_in? then %>
 <%= current_user.name %>
+<%= link_to 'ログアウト', controller: 'sessions', action: 'destroy'%>
 <% else %>
 ログインしてください
 <% end %>
@@ -18,7 +19,6 @@
 </header>
 
 <body>
-あなたのTAはアナグラさんです
 <div class = "boxContainer">
 <div class = "box1">
 <h2>TA</h2>
@@ -38,7 +38,7 @@
 </ul>
 </div>
 </div>
-<h2><%= link_to 'アナグラさんとの予定をカレンダーに追加する', controller: 'events' %></h2>
+<h4><%= link_to '予定をカレンダーに追加', controller: 'events' %></h4>
   <div id="container">
     <div id="calendar">
     </div>
@@ -47,9 +47,4 @@
 </body>
 
 <footer>Copyright ©GingDagoz All Rights Reserved.
-
-<h2><%= link_to 'アナグラさんにチャットする', controller: 'articles' %></h2>
-<h2><%= link_to 'ログアウトする', controller: 'sessions', action: 'destroy'%><h2>
-
-
 </footer>

@@ -4,25 +4,24 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>password</th>
+    <th>名前</th>
     <th></th>
   </tr>
 
   <% @users.each do |article| %>
     <tr>
       <td><%= article.name %></td>
-      <td><%= article.password %></td>
       <td><%= link_to 'Show', user_path(article) %></td>
     </tr>
   <% end %>
 </table>
 
-<h1>DMサンプルアプリ</h1>
+<h1>DMできます</h1>
 <% if logged_in? then %>
-<h2>Hello <%= current_user.email %></h2>
+<h2>私の名前は <%= current_user.name %></h2>
+<h2>私のメールアドレスは <%= current_user.email %></h2>
   <% @users.each do |u| %>
-  <p><a href="/users/<%= u.id %>"><%= u.email %>さん</a></p>
+  <p><a href="/users/<%= u.id %>"><%= u.name %>さん</a></p>
   <hr>
   <% end %>
   <%= link_to 'ログアウトする', controller: 'sessions', action: 'destroy'%>

@@ -1,3 +1,5 @@
+<% if @user.id == current_user.id %>
+<h1>これは私です</h1>
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -8,13 +10,8 @@
   <%= @user.password %>
 </p>
 
-<h1>ユーザー詳細</h1>
-
-<h2><%= @user.email %></h2>
-
-<% if @user.id == current_user.id %>
-
 <% else %>
+  <h1><%= @user.name %>さんとチャットする</h1>
   <% if @isRoom == true %>
     <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
   <% else %>
