@@ -6,8 +6,15 @@
 </div>
 <div class = "box4">
 <section>
-〇〇でログインしています
+
+<% if logged_in? then %>
+<%= current_user.name %>
+<% else %>
+ログインしてください
+<% end %>
+
 </section>
+
 </div>
 </div>
 </header>
@@ -44,7 +51,15 @@
 </span>
 </body>
 
+<h2><%= link_to 'アナグラさんとの予定をカレンダーに追加する', controller: 'events' %></h2>
+  <div id="container">
+    <div id="calendar">
+    </div>
+</div> 
+
 <footer>Copyright ©GingDagoz All Rights Reserved.
-<!--<h2><%= link_to 'アナグラさんにチャットする', controller: 'articles' %></h2>
-<h2><%= link_to 'アナグラさんとの予定をカレンダーに追加する', controller: 'events' %></h2>-->
+
+<h2><%= link_to 'アナグラさんにチャットする', controller: 'articles' %></h2>
+<h2><%= link_to 'ログアウトする', controller: 'sessions', action: 'destroy'%><h2>
+
 </footer>
