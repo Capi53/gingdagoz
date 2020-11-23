@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   root 'sessions#new'
 
   # get '/users/index'
+  
+  get 'home' => 'home#index'
 
   get 'signup' => 'users#new'
 

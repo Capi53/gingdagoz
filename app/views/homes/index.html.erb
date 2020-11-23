@@ -1,3 +1,4 @@
+<body>
 <header>
 <div class = "boxContainer">
 <div class = "box3">
@@ -5,6 +6,7 @@
 </div>
 <div class = "box4">
 <section>
+
 <% if logged_in? then %>
 <%= current_user.name %>
 <%= link_to 'ログアウト', controller: 'sessions', action: 'destroy'%>
@@ -18,95 +20,17 @@
 </div>
 </header>
 
-<body>
+<br><br><br><br><br>    <!--ここ最悪すぎるからもっとどうにかできんかな〜-->
+<span class="br">
+あなたのTAはアナグラさんです
 
-<% if current_user.role_id == 2 %>
-
-<div class = "boxContainer">
-<div class = "box1">
-<h2>生徒</h2>
-<ul>
-<% @users.each do |u| %>
-  <% if u.role_id == 1 %>
-    <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
-  <% end %>
-<% end %>
-</ul>
+<div class = "flex">
+<div class = "box5">
+<div id="container">
+<div id="calendar">
 </div>
-<div class = "box2">
-<h2>TA</h2>
-<ul>
-<% @users.each do |u| %>
-  <% if u.role_id == 2 %>
-    <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
-  <% end %>
-<% end %>
-<li><%= link_to 'アナグラさん', controller: 'articles' %></li>
-<li>たくやさん</li>
-<li>アイリスさん</li>
-<li>○○さん</li>
-</ul>
+</div> 
 </div>
-<div class = "box1">
-<h2>先生</h2>
-<ul>
-<% @users.each do |u| %>
-  <% if u.role_id == 3 %>
-    <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
-  <% end %>
-<% end %>
-<li>國田先生</li>
-<li>當間先生</li>
-<li>○○先生</li>
-</ul>
-</div>
-</div>
-
-<% elsif current_user.role_id == 3 %>
-
-<div class = "boxContainer">
-<div class = "box1">
-<h2>生徒</h2>
-<ul>
-<% @users.each do |u| %>
-  <% if u.role_id == 1 %>
-    <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
-  <% end %>
-<% end %>
-</ul>
-</div>
-<div class = "box2">
-<h2>TA</h2>
-<ul>
-<% @users.each do |u| %>
-  <% if u.role_id == 2 %>
-    <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
-  <% end %>
-<% end %>
-<li><%= link_to 'アナグラさん', controller: 'articles' %></li>
-<li>たくやさん</li>
-<li>アイリスさん</li>
-<li>○○さん</li>
-</ul>
-</div>
-<div class = "box2">
-<h2>先生</h2>
-<ul>
-<% @users.each do |u| %>
-  <% if u.role_id == 3 %>
-    <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
-  <% end %>
-<% end %>
-<li>國田先生</li>
-<li>當間先生</li>
-<li>○○先生</li>
-</ul>
-</div>
-</div>
-
-<% else %>
-
-<div class = "boxContainer">
 <div class = "box1">
 <h2>TA</h2>
 <ul>
@@ -136,15 +60,15 @@
 </div>
 </div>
 
-<% end %>
+<div class="disp-img"></div>
+</span>
+</body>
 
 <h4><%= link_to '予定をカレンダーに追加', controller: 'events' %></h4>
-  <div id="container">
+
+ <div id="container">
     <div id="calendar">
     </div>
 </div>
 
-</body>
-
-<footer>Copyright ©GingDagoz All Rights Reserved.
-</footer>
+<footer>Copyright ©GingDagoz All Rights Reserved.</footer>

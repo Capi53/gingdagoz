@@ -1,11 +1,13 @@
 header{
     font-family: Papyrus;
-    
     font-size:25px;
     margin-left:auto;
     margin-right:auto;
 }
 .box3{
+    background-color:#ffffff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px #aaaaaa;
     float: left;//横揃え
 }
 .box4{
@@ -23,24 +25,43 @@ section{
 body{
     color:#000000;
     background-color:#48d1cc;
-    font-size:20px;
-    
+    font-size:22px;
     }
+.br::before {
+    content: "\A" ;
+    white-space: pre ;
+}
+.disp-img{
+    background-image: url(usagi1.gif);             //画像のURLを指定
+    background-repeat:  no-repeat;                //画像の繰り返しを指定         
+    width:auto;                                   //横幅のサイズを指定
+    height:400pX;                                 //縦幅のサイズを指定    
+}
+figure{
+    width: 250px;
+}
+.box5{
+    float: left;//横揃え
+}
 .box1{
     margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 1px 1px 3px #aaaaaa;
     border-radius: 20px;
     width: 250px;
+    height: 325px;
     background-color:#ffffff;
     float: left;//横揃え
 }
 .box1 h2 {
-    font-size:18px;
+    font-size:30px;
     margin-left:auto;
     margin-right:auto;
     text-align: center}
-.box1 li {list-style-image: url(listmark.png);}
+.box1 li {
+    margin-bottom: 15px;    //リストの間隔
+    font-size:23px;
+    list-style-image: url(listmark.png);}
 .box2{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -52,11 +73,27 @@ body{
     float: left;//横揃え
 }
 .box2 h2 {
-    font-size:18px;
+    font-size:30px;
     text-align: center}
-.box2 li {list-style-image: url(listmark2.png);}
-.boxContainer{
-    overflow: hidden;//横揃え
+.box2 li {
+    margin-bottom: 15px;    //リストの間隔
+    font-size:23px; //フォントサイズ
+    list-style-image: url(listmark2.png);}
+//.boxContainer{
+//    overflow: hidden;//横揃え
+//}
+.flex{  //3要素を横揃えしたくて入れてみた
+    padding: 2.5% 0;    //これは余白
+    display: flex;  //これないと困る
+    flex-direction: row;    //何これわからん
+    justify-content: space-evenly;  //横の余白揃えてるっぽい？
+}
+.flex > *{
+    width: 30%;
+}
+.flex,
+.flex > *{
+    border: 3px solid #aaa;
 }
 footer{
     font-family: Papyrus;
@@ -66,7 +103,3 @@ footer{
 //     background-color:#ffffff;}
 // aside h2 {font-size:18px;}
 // aside li {list-style-image: url(listmark2.png);}
-
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
