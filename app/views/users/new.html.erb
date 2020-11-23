@@ -1,5 +1,5 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<h1>アカウント作成</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -16,8 +16,9 @@
 
       <%= f.label :role_id %>
       <%= f.number_field :role_id, class: 'form-control' %>
+      <p> ※Role:生徒の方は1、TAの方は2、先生は3でお願いします。 </p>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit "アカウントを作成する", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

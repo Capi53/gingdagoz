@@ -1,11 +1,25 @@
+<% if @user.id == current_user.id %>
+<h2>これは私です</h2>
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <h3><strong>名前:</strong>
+  <%= @user.name %></h3>
+  <h3><strong>メールアドレス:</strong>
+  <%= @user.email %></h3>
 </p>
 
-<p>
-  <strong>password:</strong>
-  <%= @user.password %>
-</p>
+<% else %>
+  <h1><%= @user.name %>さんとチャットする</h1>
+  <% if @isRoom == true %>
+    <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
+  <% else %>
+    <%= form_for @room do |f| %>
+      <%= fields_for @entry do |e| %>
+        <%= e.hidden_field :user_id, :value=> @user.id %>
+      <% end %>
+      <%= f.submit "チャットを始める" %>
+    <% end %>
+  <% end %>
+<% end %>
 
-<%= link_to '戻る', users_path %>
+<%= link_to "ユーザー一覧に戻る", users_path %>
+<%= link_to 'ホームに戻る', controller: 'homes'%>

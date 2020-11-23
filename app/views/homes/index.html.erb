@@ -9,6 +9,7 @@
 
 <% if logged_in? then %>
 <%= current_user.name %>
+<%= link_to 'ログアウト', controller: 'sessions', action: 'destroy'%>
 <% else %>
 ログインしてください
 <% end %>
@@ -18,6 +19,7 @@
 </div>
 </div>
 </header>
+
 <br><br><br><br><br>    <!--ここ最悪すぎるからもっとどうにかできんかな〜-->
 <span class="br">
 あなたのTAはアナグラさんです
@@ -32,6 +34,11 @@
 <div class = "box1">
 <h2>TA</h2>
 <ul>
+<% @users.each do |u| %>
+  <% if u.role_id == 2 %>
+    <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
+  <% end %>
+<% end %>
 <li><%= link_to 'アナグラさん', controller: 'articles' %></li>
 <li>たくやさん</li>
 <li>アイリスさん</li>
@@ -41,25 +48,27 @@
 <div class = "box2">
 <h2>先生</h2>
 <ul>
+<% @users.each do |u| %>
+  <% if u.role_id == 3 %>
+    <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
+  <% end %>
+<% end %>
 <li>國田先生</li>
 <li>當間先生</li>
 <li>○○先生</li>
 </ul>
 </div>
 </div>
+
 <div class="disp-img"></div>
 </span>
 </body>
 
-<h2><%= link_to 'アナグラさんとの予定をカレンダーに追加する', controller: 'events' %></h2>
-  <div id="container">
+<h4><%= link_to '予定をカレンダーに追加', controller: 'events' %></h4>
+
+ <div id="container">
     <div id="calendar">
     </div>
-</div> 
+</div>
 
-<footer>Copyright ©GingDagoz All Rights Reserved.
-
-<h2><%= link_to 'アナグラさんにチャットする', controller: 'articles' %></h2>
-<h2><%= link_to 'ログアウトする', controller: 'sessions', action: 'destroy'%><h2>
-
-</footer>
+<footer>Copyright ©GingDagoz All Rights Reserved.</footer>

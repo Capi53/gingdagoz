@@ -26,4 +26,7 @@ Rails.application.routes.draw do
   get 'calender' => 'events#index'
 
   resources :users
+
+  resources :messages, :only => [:create]
+  resources :rooms, :only => [:create, :show, :index]
 end
