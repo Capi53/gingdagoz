@@ -5,6 +5,9 @@ header{
     margin-right:auto;
 }
 .box3{
+    background-color:#ffffff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px #aaaaaa;
     float: left;//横揃え
 }
 .box4{
@@ -24,11 +27,15 @@ body{
     background-color:#48d1cc;
     font-size:22px;
     }
+.br::before {
+    content: "\A" ;
+    white-space: pre ;
+}
 .disp-img{
-    background-image:url(usagi1.gif);             /* 画像のURLを指定       */
-    background-repeat:  no-repeat;                /* 画像の繰り返しを指定  */              
-    width:auto;                                   /* 横幅のサイズを指定    */
-    height:400pX;                                 /* 縦幅のサイズを指定    */
+    background-image:url(usagi1.gif);             //画像のURLを指定
+    background-repeat:  no-repeat;                //画像の繰り返しを指定         
+    width:auto;                                   //横幅のサイズを指定
+    height:400pX;                                 //縦幅のサイズを指定    
 }
 figure{
     width: 250px;
@@ -42,6 +49,7 @@ figure{
     box-shadow: 1px 1px 3px #aaaaaa;
     border-radius: 20px;
     width: 250px;
+    height: 325px;
     background-color:#ffffff;
     float: left;//横揃え
 }
@@ -95,7 +103,3 @@ footer{
 //     background-color:#ffffff;}
 // aside h2 {font-size:18px;}
 // aside li {list-style-image: url(listmark2.png);}
-
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
