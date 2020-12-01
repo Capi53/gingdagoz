@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_030419) do
     t.text "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "password_digest"
   end
 
   add_foreign_key "entries", "rooms"

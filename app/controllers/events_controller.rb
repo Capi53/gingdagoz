@@ -35,6 +35,7 @@ class EventsController < ApplicationController
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
+    @events = Event.where(user_id: current_user.id)
   end
 
   # PATCH/PUT /events/1
