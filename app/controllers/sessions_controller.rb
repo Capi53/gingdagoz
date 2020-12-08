@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
       log_in @user
       if current_user.role_id == 2
-        redirect_to homes_index_path
+        redirect_to homes_ta_index_path
       elsif current_user.role_id == 3
         redirect_to users_index_path
       else
