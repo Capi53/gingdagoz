@@ -47,7 +47,7 @@ class UsersController < ApplicationController
 #      respond_to do |format|
 # 
    end
-  
+
      private
      def user_params
        params.require(:user).permit(:role_id, :name, :email, :password)
