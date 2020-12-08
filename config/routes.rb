@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   get 'homes/index'
   get 'users/index'
   get 'homes/ta_index'
-  
-  resources :articles
 
   #root 'homes#index'
 
@@ -14,7 +12,7 @@ Rails.application.routes.draw do
 
   # get '/users/index'
   
-  get 'home' => 'home#index'
+  # get 'home' => 'home#index'
 
   get 'signup' => 'users#new'
 
