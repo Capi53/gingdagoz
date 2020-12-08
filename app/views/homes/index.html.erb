@@ -35,7 +35,7 @@
 <h2>TA</h2>
 <ul>
 <% @users.each do |u| %>
-  <% if u.role_id == 2 %>
+  <% if u.ta? %>
     <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
   <% end %>
 <% end %>
@@ -47,7 +47,7 @@
 <h2>先生</h2>
 <ul>
 <% @users.each do |u| %>
-  <% if u.role_id == 3 %>
+  <% if u.teacher? %>
     <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
   <% end %>
 <% end %>
