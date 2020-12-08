@@ -1,0 +1,10 @@
+<h1>DMできます</h1>
+
+<h2>私の名前は <%= current_user.name %></h2>
+<h2>私のメールアドレスは <%= current_user.email %></h2>
+  <% @users.each do |u| %>
+  <p><a href="/users/<%= u.id %>"><%= u.name %>さん</a></p>
+  <hr>
+  <% end %>
+
+<%= link_to 'ホームに戻る', controller: 'homes'%>

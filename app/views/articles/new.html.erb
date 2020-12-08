@@ -1,0 +1,19 @@
+<h1>新しいコメント</h1>
+
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit "送信" %>
+  </p>
+<% end %>
+
+<%= link_to '戻る', articles_path %>
