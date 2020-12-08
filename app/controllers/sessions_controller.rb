@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
       log_in @user
-      if current_user.role_id == 2
-        redirect_to homes_index_path
-      elsif current_user.role_id == 3
+      if current_user.ta?
+        redirect_to homes_ta_index_path
+      elsif current_user.teacher?
         redirect_to users_index_path
       else
         redirect_to homes_index_path
