@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :entries, dependent: :destroy
   has_secure_password
+  validates :role_id, presence: true
+
   def show
     @member = User.find(params[:id])
   end  
