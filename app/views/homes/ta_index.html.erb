@@ -1,23 +1,20 @@
 <body>
 <header>
-<div class = "boxContainer">
 <div class = "box3">
 <h1>StudySupport</h1>
 </div>
+
 <div class = "box4">
 <section>
-
 <% if logged_in? then %>
 <%= current_user.name %>
 <%= link_to 'ログアウト', controller: 'sessions', action: 'destroy'%>
 <% else %>
 ログインしてください
 <% end %>
-
 </section>
+</div>
 
-</div>
-</div>
 </header>
 
 <br><br><br><br><br>    <!--ここ最悪すぎるからもっとどうにかできんかな〜-->

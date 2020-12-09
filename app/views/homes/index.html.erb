@@ -1,28 +1,24 @@
 <body>
 <header>
-<div class = "boxContainer">
 <div class = "box3">
 <h1>StudySupport</h1>
 </div>
+
 <div class = "box4">
 <section>
-
 <% if logged_in? then %>
 <%= current_user.name %>
 <%= link_to 'ログアウト', controller: 'sessions', action: 'destroy'%>
 <% else %>
 ログインしてください
 <% end %>
-
 </section>
+</div>
 
-</div>
-</div>
 </header>
 
 <br><br><br><br><br>    <!--ここ最悪すぎるからもっとどうにかできんかな〜-->
 <span class="br">
-あなたのTAはアナグラさんです
 
 <div class = "flex">
 <div class = "box5">
@@ -50,8 +46,6 @@
     <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
   <% end %>
 <% end %>
-<li>國田先生</li>
-<li>當間先生</li>
 <li>○○先生</li>
 </ul>
 </div>
@@ -62,8 +56,6 @@
 </body>
 
 <h4><%= link_to '予定をカレンダーに追加', controller: 'events' %></h4>
-
-
 
 <script>
 // CRUDを行う際にCSRF対策のtokenを発行
