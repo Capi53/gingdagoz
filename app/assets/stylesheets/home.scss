@@ -11,8 +11,8 @@ header{
     float: left;//横揃え
 }
 .box4{
-    float: left;//横揃え
-    float: right //右揃え
+    // float: left;  //横揃え
+    float: right; //右揃え
 }
 section{
     background-color:#ffffff;
@@ -49,7 +49,7 @@ figure{
     box-shadow: 1px 1px 3px #aaaaaa;
     border-radius: 20px;
     width: 250px;
-    height: 325px;
+    height: auto;
     background-color:#ffffff;
     float: left;//横揃え
 }
@@ -68,6 +68,7 @@ figure{
     box-shadow: 1px 1px 3px #aaaaaa;
     border-radius: 20px;
     width: 250px;
+    height:auto;
 
     background-color:#ffffff;
     float: left;//横揃え
