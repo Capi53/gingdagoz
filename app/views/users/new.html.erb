@@ -15,8 +15,8 @@
       <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :role_id %>
-      <%= f.number_field :role_id, class: 'form-control' %>
-      <p> ※Role:生徒の方は1、TAの方は2、先生は3でお願いします。 </p>
+      <%= f.select :role_id, [["生徒", "student"], ["TA", "ta"], ["先生", "teacher"]], include_blank: "選択して下さい" %>
+
 
       <%= f.submit "アカウントを作成する", class: "btn btn-primary" %>
     <% end %>
