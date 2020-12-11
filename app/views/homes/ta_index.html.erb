@@ -28,10 +28,10 @@
 </div> 
 </div>
 <div class = "box1">
-<h2>TA</h2>
+<h2>生徒</h2>
 <ul>
 <% @users.each do |u| %>
-  <% if u.ta? %>
+  <% if u.student? %>
     <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
   <% end %>
 <% end %>

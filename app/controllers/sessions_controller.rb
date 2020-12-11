@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       if current_user.ta?
         redirect_to homes_ta_index_path
       elsif current_user.teacher?
-        redirect_to users_index_path
+        redirect_to users_path
       else
         redirect_to homes_index_path
       end
