@@ -8,18 +8,25 @@
 </p>
 
 <% else %>
-  <h1><%= @user.name %>さんとチャットする</h1>
+  <h2><%= @user.name %>さんとチャットする</h2>
+
   <% if @isRoom == true %>
     <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
+
   <% else %>
     <%= form_for @room do |f| %>
       <%= fields_for @entry do |e| %>
         <%= e.hidden_field :user_id, :value=> @user.id %>
       <% end %>
       <%= f.submit "チャットを始める" %>
-    <% end %>
+      <% end %>
   <% end %>
 <% end %>
 
-<%= link_to "ユーザー一覧に戻る", users_path %>
-<%= link_to 'ホームに戻る', controller: 'homes'%>
+<br>
+
+<% if current_user.teacher? %>
+  <%= link_to "ユーザー一覧に戻る", users_path %>
+<% else %>
+  <%= link_to 'ホームに戻る', controller: 'homes'%>
+<% end %>
