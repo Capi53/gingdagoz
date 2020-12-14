@@ -30,16 +30,20 @@ class UsersController < ApplicationController
      end
   
     def new
-       @user = User.new
+      if current_user.teacher?
+        @user = User.new
+      else
+        redirect_to homes_index_path
+      end
     end
   
    def create
       @user = User.new(user_params)
     # debugger
       if @user.save
-        log_in @user
+        # log_in @user
         flash[:success] = "Welcome to the Sample App!"
-        redirect_to @user
+        redirect_to users_index_path #users_index_pathでuser一覧を見たい
       else
         render 'new'
       end

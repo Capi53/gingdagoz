@@ -1,9 +1,10 @@
 <body>
 <div class = "home">
 <header>
-<div class = "box3">
-<div class="logo"></div>
-<h1>StudySupport</h1>
+<div class = "box3" style="display:inline-flex">
+<!-- <img src="/assets/images/favicon.png">-->
+  <%= image_tag 'favicon.png', :size => "64x64"%>
+  <h1>StudySupport</h1>
 </div>
 
 <div class = "box4">
@@ -33,7 +34,7 @@
 <h2>TA</h2>
 <ul>
 <% @users.each do |u| %>
-  <% if u.ta? %>
+  <% if u.ta? and u.id != current_user.id%>
     <li><a href="/users/<%= u.id %>"><%= u.name %>さん</a></li>
   <% end %>
 <% end %>
@@ -43,7 +44,7 @@
 <h2>先生</h2>
 <ul>
 <% @users.each do |u| %>
-  <% if u.teacher? %>
+  <% if u.teacher? and u.id != current_user.id%>
     <li><a href="/users/<%= u.id %>"><%= u.name %>先生</a></li>
   <% end %>
 <% end %>

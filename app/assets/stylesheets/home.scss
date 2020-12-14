@@ -45,6 +45,14 @@ body{
     width:500px;                                   //画像の横幅のサイズを指定
     height:200px;                                 //画像の縦幅のサイズを指定    
 }
+
+.disp-img2{
+    background-image: url(usagitya.gif);             //画像のURLを指定
+    background-repeat:  no-repeat;                //画像の繰り返しを指定         
+    width:500px;                                   //画像の横幅のサイズを指定
+    height:200px;                                 //画像の縦幅のサイズを指定    
+}
+
 figure{
     width: 250px;
 }
