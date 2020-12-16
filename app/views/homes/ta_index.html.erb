@@ -1,8 +1,11 @@
 <body>
+<div class = "home">
 <header>
-<div class = "box3">
-<h1>StudySupport</h1>
-</div>
+<div class = "box3" style="display:inline-flex">
+<h1>StudySupport</h1>	<!-- <img src="/assets/images/favicon.png">-->
+  <%= image_tag 'favicon.png', :size => "64x64"%>
+  <h1>StudySupport</h1>
+</div>  
 
 <div class = "box4">
 <section>
@@ -49,9 +52,8 @@
 </div>
 </div>
 
-<div class="disp-img"></div>
+<div class="disp-img2"></div>
 </span>
-</body>
 
 <h4><%= link_to '予定をカレンダーに追加', controller: 'events' %></h4>
 
@@ -107,3 +109,5 @@
 </script>
 
 <footer>Copyright ©GingDagoz All Rights Reserved.</footer>
+</div>
+</body>

@@ -4,11 +4,19 @@ header{
     margin-left:auto;
     margin-right:auto;
 }
+.logo{
+    background-image: url(logo2.png);             //画像のURLを指定
+    background-repeat:  no-repeat;                //画像の繰り返しを指定         
+    width:100px;                                   //画像の横幅のサイズを指定
+    height:100px;                                 //画像の縦幅のサイズを指定    
+}
 .box3{
     background-color:#ffffff;
     border-radius: 20px;
     box-shadow: 1px 1px 3px #aaaaaa;
-    float: left;//横揃え
+    display: inline-block;
+    white-space: nowrap;
+    //float: left;//横揃え
 }
 .box4{
     // float: left;  //横揃え
@@ -26,7 +34,7 @@ body{
     color:#000000;
     background-color:#48d1cc;
     font-size:22px;
-    }
+}
 .br::before {
     content: "\A" ;
     white-space: pre ;
@@ -37,6 +45,14 @@ body{
     width:500px;                                   //画像の横幅のサイズを指定
     height:200px;                                 //画像の縦幅のサイズを指定    
 }
+
+.disp-img2{
+    background-image: url(usagitya.gif);             //画像のURLを指定
+    background-repeat:  no-repeat;                //画像の繰り返しを指定         
+    width:500px;                                   //画像の横幅のサイズを指定
+    height:200px;                                 //画像の縦幅のサイズを指定    
+}
+
 figure{
     width: 250px;
 }
@@ -95,9 +111,6 @@ figure{
 .flex,
 .flex > *{
     border: 3px solid #aaa;
-}
-footer{
-    font-family: Papyrus;
 }
 
 //とりあえずコメントアウト
@@ -161,3 +174,42 @@ select {
     box-shadow    : none;        /* カーソル時の影消去 */
     opacity       : 1;           /* カーソル時透明度 */
   }
+  .chat{
+    text-align : center;
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 120px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  }
+  .chat h2{
+    font-size:60px;
+  }
+  .chat p{
+    font-size:35px;
+  }
+  .chat footer{
+    width: 100%;
+    background-color: #89c7de;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+  }
+  .home{
+    text-align : center;
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 120px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  }
+  footer{
+    font-family: Papyrus;
+    width: 100%;
+    background-color: #89c7de;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+}
